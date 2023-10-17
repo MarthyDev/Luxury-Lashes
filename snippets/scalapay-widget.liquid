@@ -1,0 +1,34 @@
+{% if cart.currency.iso_code == "EUR" %}  
+  {%- assign widget_locale = shop.locale -%}  
+  {%- if request.path contains '/it/' -%}{%- assign widget_locale = 'it' -%}{%- endif -%}  
+  {%- if request.path contains '/en/' -%}{%- assign widget_locale = 'en' -%}{%- endif -%}  
+  {%- if request.path contains '/es/' -%}{%- assign widget_locale = 'es' -%}{%- endif -%}  
+  {%- if request.path contains '/fr/' -%}{%- assign widget_locale = 'fr' -%}{%- endif -%}  
+  {%- if request.path contains '/de/' -%}{%- assign widget_locale = 'de' -%}{%- endif -%}  
+  {%- if request.path contains '/pt/' -%}{%- assign widget_locale = 'pt' -%}{%- endif -%}  
+    <scalapay-widget
+      style="{%- if style -%}{{ style }}{%- endif -%}"
+      type="{{ type }}"
+      amount="{{ amount | plus: 0 | divided_by: 100.00 }}"
+      frequency-number="30"
+      number-of-installments="3"
+      hide="false"
+      hide-price="false"
+      min="{%- if minAmount -%}{{ minAmount }}{%- endif -%}"
+      max="{%- if maxAmount -%}{{ maxAmount }}{%- endif -%}"
+      amount-selectors='[{%- if priceSelectors -%}{{ priceSelectors }}{%- endif -%}]'
+      currency-position="after"
+      currency-display="symbol"
+      logo-size="25"
+      theme="primary"
+      locale="{{widget_locale}}"
+      class="hydrated">  
+    </scalapay-widget>
+
+    <script async type="module"
+      src="https://cdn.scalapay.com/widget/v3/js/scalapay-widget.esm.js"></script>
+
+    <script async type="nomodule"
+      src="https://cdn.scalapay.com/widget/v3/js/scalapay-widget.js"></script>
+
+{% endif %}

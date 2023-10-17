@@ -1,0 +1,250 @@
+{% style %}
+
+.accordion.css-accordion.preguntas {
+	position: relative;
+	margin-top: -150px;
+}
+
+.accordion-item-input:checked ~ .accordion-item-bd {
+  max-height: 1000px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
+}
+
+.accordion-item-input:checked ~ .accordion-item-hd > .accordion-item-hd-cta {
+  transform: rotate(0);
+}
+
+.accordion-item-hd-cta {
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 6px );
+  /*minus half font-size*/
+  right: 0;
+  pointer-events: none;
+  transition: transform .3s ease;
+  transform: rotate(-180deg);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.accordion-item-bd {
+  max-height: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  transition: max-height .15s ease-out, margin-bottom .3s ease-out, padding .3s ease-out;
+}
+
+.accordion-item-input {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  overflow: hidden;
+  position: absolute;
+  left: -9999px;
+}
+
+/* */
+
+.preguntas-frecuentes {
+  background: #ffffff;
+	position: relative;
+	width: 100%;
+	z-index: 89;
+	}
+
+.preguntas-frecuentes-contenedor {
+  margin: 0 auto;
+	padding: 4rem 1.25rem 6rem;
+	position: relative;
+	overflow: hidden;
+	width: 80%;
+	max-width: 106.25rem;
+}
+
+.preguntas-frecuentes-encabezado-linea-roja {
+  border-bottom: 2px #d60510 solid;
+	margin: 15px auto 21px;
+	width: 40px;
+}
+
+.preguntas-frecuentes h1 {
+  text-align: center;
+}
+
+.preguntas {
+  padding-top: 3.21rem;
+}
+
+.preguntas label {
+  background: #fff;
+	border-bottom: 1px solid #eee;
+	border-radius: 8px;
+  cursor: pointer;
+  display: block;
+	font-size: 1.1875rem;
+	letter-spacing: -.0225rem;
+	line-height: 1.36842;
+	margin-bottom: 16px;
+	padding: 20px 10px;
+  position: relative;
+	transition: all 0.35s ease;
+}
+
+.preguntas label:hover {
+  background: #efccb1;
+	color: #F8F8FF;
+	cursor: pointer;
+}
+
+.preguntas label::before {
+  content: "\276f";
+	font-size: 18px;
+	float: left;
+	line-height: 30px;
+	margin: 0 15px 0 5px;
+	transition: all 0.15s ease;
+	color: #efccb1;
+}
+
+.preguntas label:hover::before {
+  color: #fff;
+  opacity: 0.55;
+  transform: rotate(90deg);
+}
+
+.preguntas-cerrar {
+  cursor: pointer;
+}
+
+.preguntas label.cerrar::after {
+  content: "\2715";
+	float: right;
+	font-size: 11px;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+.preguntas label.cerrar::before {
+  transform: rotate(-90deg);
+}
+
+.respuesta {
+  background: #fff;
+  line-height: 1.8em;
+  margin-bottom: 25px;
+  margin-top: -17px;
+  border-top: 1px dashed #eee;
+  border-radius: 11px
+}
+
+.respuesta p {
+  margin: 0;
+  padding: 25px 25px;
+}
+
+.respuesta-enlace-dotted {
+  border-bottom: 1px dotted #000;
+}
+
+.texto-h3 {
+  font-size: 1.21rem;
+}
+
+@media (min-width: 400px) {
+  .texto-h3 {
+    font-size: 1.59rem;
+  }
+}
+	
+@media (min-width: 768px) {
+  .preguntas {
+    padding-top: 5.21rem;
+  }
+  .preguntas label {
+    font-size: 1.3125rem;
+    letter-spacing: -.01875rem;
+    line-height: 1.33333;
+    padding: 20px;
+  }
+  .respuesta p {
+    font-size: 1.21rem;
+    letter-spacing: 0.021rem;
+    line-height: 2.1;
+    padding: 25px 50px;
+  }
+  .texto-h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .texto-h3 {
+    font-size: 2.35rem;
+  }
+}
+
+{% endstyle %}
+
+<section class="preguntas-frecuentes clearfix">	
+	<div class="preguntas-frecuentes-contenedor serif">
+     
+      <div class="accordion css-accordion preguntas">
+        
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item1" /><label for="item1" class="accordion-item-hd">Quelle est la durée d'utilisation ?<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Nos faux cils BADGYAL FEVER VISION 3D permettent plus de 10 utilisations si l'entretien est respecté.</p></div>
+        
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item2" /><label for="item2" class="accordion-item-hd">Puis-je avoir une réaction allergique ?<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Dans le cas peu probable où vous réagiriez à l'un de nos produits que vous avez achetés chez nous au cours des 30 derniers jours, veuillez envoyer un e-mail avec une photo et une description de la réaction à sav.luxurylashes@gmail.com. Pour que le retour soit accepté, le produit doit être utilisé à moins de 20 %, et une photo de la réaction doit être fournie. Un retour d'allergie/irritation ne peut pas être traité sans ces informations et si cela ne peut être fourni, nous ne serons pas en mesure d'accepter le retour. Nous ne sommes pas en mesure de couvrir les frais de port.</p></div>
+        
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item3" /><label for="item3" class="accordion-item-hd">Quels sont les délais de livraison ?<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Attention ! En raison des mesures prises pour faire face au coronavirus, la situation est susceptible de changer.<br><br>Nous expédions nos commandes très rapidement ! Une fois que nous disposons de toutes vos informations, votre commande quittera notre entrepôt dans les 24 à 48 heures ou même plus tôt (souvent, le jour même pour les commandes passées avant midi).
+         À cela doivent s'ajouter les délais de transport. En général, il faut compter entre 24 et 72 heures. Nous vous proposons une option d'expédition Express si nécessaire.
+         Pour l'international : voir ici.</p></div>
+        
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item4" /><label for="item4" class="accordion-item-hd">Comment puis-je contacter votre service client ? <span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Vous pouvez nous envoyer un mail via le formulaire de contact ou bien directement sur sav.luxurylashes@gmail.com et nous y répondrons dans les plus brefs délais.
+         Le délai est estimé jusqu'à 48 heures pour les jours ouvrables.</p></div>
+         
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item5" /><label for="item5" class="accordion-item-hd">Êtes-vous contre la cruauté ? Êtes-vous végan ?<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Chez LUXURY LASHES, nous sommes 100 % contre la cruauté et végan. Nous n’effectuons ni ne sous-traitons aucun test sur les animaux. De plus, nos faux cils sont fabriqués avec des fibres synthétiques de qualité supérieure.
+
+         Malheureusement, les faux cils fabriqués à partir de poils de vison (mink) sont très populaires sur le marché. Contrairement à ce que peuvent dire certaines marques, utiliser des poils de mink n’est PAS sans cruauté. Nous déplorons cet énorme mensonge et le dénonçons !</p></div>
+        
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item6" /><label for="item6" class="accordion-item-hd">Ai-je besoin d'un compte pour passer commande ? <span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Vous pouvez finaliser votre commande sans créer de compte. Cependant, nous vous le conseillons afin de pouvoir suivre ou modifier vos commandes plus facilement.
+         Si vous en avez besoin, merci de nous contacter à l'adresse suivante : sav.luxurylashes@gmail.com ou remplissez le formulaire de contact.</p></div>
+               
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item7" /><label for="item7" class="accordion-item-hd">J'ai reçu un bon de 10€, comment l'utiliser ?<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Vous avez suivi notre programme de fidélité, et vous possédez une cagnotte de 10€ ou plus et vous souhaitez vous en servir.
+         Très simple : lors de votre prochaine commande avant de valider votre panier dans l'espace réservé au code promo ajoutez la mention "FID10", puis activez. 
+         Votre bon sera automatiquement déduit de votre commande.  
+         À noter qu'il est possible de cumuler plusieurs bons de votre cagnotte.</p></div>
+        
+        <input class="accordion-item-input" type="checkbox" name="accordion" id="item8" />
+        <label for="item8" class="accordion-item-hd">Comment suivre mon colis ?<span class="accordion-item-hd-cta">&#9650;</span></label>
+        <div class="accordion-item-bd respuesta"><p>Si vous avez créé un compte lors de votre achat, vous pouvez vous connecter sur votre espace client et suivre votre colis.<br>Sinon, une fois votre commande expédiée, vous recevrez un numéro de suivi par mail qui vous permettra de suivre l’acheminement de votre colis.</p></div>
+        
+      </div>      
+    </div>    
+</section>
+
+
+
+
+{% schema %}
+{
+  "name": "faq",
+  "class": "index-section",
+  "presets": [
+    {
+      "name": "faq",
+      "category": "faq"
+    }
+  ]
+}
+{% endschema %}
